@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.generate-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: #45a049;
+}
+
+.print-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+    background-color: #1976D2;
+}
+
+.problems-container {
+    margin-top: 30px;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.problem-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.problem {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.problem-number {
+    font-weight: bold;
+    color: #333;
+}
+
+.problem-text {
+    margin-left: 10px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        padding: 2mm;
+        padding-top: 0mm;
+        padding-bottom: 0mm;
+        max-width: none;
+        margin: 0;
+    }
+
+    .header h1{
+        display: none;
+    }
+
+    
+    .generate-btn, .print-btn {
+        display: none;
+    }
+    
+    .problems-grid {
+        font-size: 12px;
+        gap: 6px;
+    }
+    
+    .problem {
+        border: 1px solid #ccc;
+        padding: 4px;
+        background-color: white;
+        break-inside: avoid;
+    }
+    
+    .problem-text {
+        font-size: 14px;
+    }
+}
